@@ -44,6 +44,4 @@ class DL():
 
 
 if __name__ == "__main__":
-    pritn("Start")
     DL()
-    print("Stop")

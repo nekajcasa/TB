@@ -16,7 +16,7 @@ from sqlalchemy import create_engine
 
 class DL():
     def __init__(self):
-        self.engine = create_engine("sqlite:///E:\\projekti\\trading\\test.db")
+        self.engine = create_engine("sqlite:////home/tak_domzale_bot/TB/data/test.db")
         self.endpoint = "wss://stream.binance.com:9443/ws"
         self.ws = websocket.WebSocketApp(self.endpoint, on_message=self.on_message,
                                          on_open=self.on_open, on_close=self.on_close)
