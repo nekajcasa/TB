@@ -20,7 +20,8 @@ class DL():
         self.endpoint = "wss://stream.binance.com:9443/ws"
         self.ws = websocket.WebSocketApp(self.endpoint, on_message=self.on_message,
                                          on_open=self.on_open, on_close=self.on_close)
-        self.ws.run_forever()
+        info=self.ws.run_forever()
+        print(info)
 
     def on_open(self, ws):
         ws.send(json.dumps({"method": "SUBSCRIBE",
